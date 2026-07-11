@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="shop-storefront.jpg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="logo-favicon.ico">
+<link rel="apple-touch-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -52,11 +52,17 @@
 <!-- CURSOR GLOW -->
 <div id="cursor-glow" aria-hidden="true"></div>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#home" class="brand">
-      <img src="logo-transparent.png" alt="Perfect Choice Cosmetics & Bangles logo" class="brand-logo">
+      <img src="logo.png" alt="Perfect Choice Cosmetics & Bangles logo" class="brand-logo">
       <span class="brand-text">
         <strong>Perfect Choice</strong>
         <em>Cosmetics &amp; Bangles</em>
@@ -70,7 +76,6 @@
       <a href="#gallery" class="nav-link">Gallery</a>
       <a href="#reviews" class="nav-link">Reviews</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <div class="nav-indicator" aria-hidden="true"></div>
     </nav>
     <div class="nav-cta">
       <a class="btn btn-ghost magnetic" href="tel:+919991118996" aria-label="Call the shop">Call</a>
@@ -320,6 +325,4 @@
           <span class="contact-ring" aria-hidden="true">✉</span>
           <div><strong>Email</strong><p>perfectchoiceyour@gmail.com</p></div>
         </a>
-        <a class="contact-row glass magnetic" href="https://share.google/wh3zoqu2c0KT3qyXE" target="_blank" rel="noopener">
-          <span class="contact-ring" aria-hidden="true">🚩</span>
-          <div><
+        <a class="contact-row glass magnetic" href="https://shar
