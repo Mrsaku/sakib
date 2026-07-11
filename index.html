@@ -4,85 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perfect Choice Cosmetics & Bangles | Kusumgram, Purba Bardhaman</title>
-<meta name="description" content="Perfect Choice Cosmetics & Bangles in Kusumgram, Purba Bardhaman — genuine Lakmé, L'Oréal, Maybelline, MARS, Mamaearth and more. Cosmetics, bangles, artificial jewellery & beauty essentials at fair prices.">
-<meta name="keywords" content="cosmetics shop Purba Bardhaman, bangles shop Kusumgram, Perfect Choice Cosmetics, artificial jewellery Bardhaman, makeup shop near me">
-<meta name="author" content="Sakibullah Bora">
-<meta property="og:title" content="Perfect Choice Cosmetics & Bangles">
-<meta property="og:description" content="Your One-Stop Destination for Beauty, Fashion & Accessories — Kusumgram, Purba Bardhaman.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="shop-storefront.jpg">
+<meta name="description" content="Perfect Choice Cosmetics & Bangles in Kusumgram, Purba Bardhaman — genuine Lakmé, L'Oréal, Maybelline, MARS, Mamaearth and more.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=5">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "Perfect Choice Cosmetics & Bangles",
-  "image": "shop-storefront.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kusumgram",
-    "addressRegion": "Purba Bardhaman",
-    "addressCountry": "IN"
-  },
-  "telephone": "+919991118996",
-  "email": "perfectchoiceyour@gmail.com",
-  "url": "https://www.instagram.com/perfectchoice.store",
-  "priceRange": "₹₹"
-}
+<!-- BULLETPROOF PRELOADER — hides even if script.js fails -->
+<style>
+#preloader{position:fixed;inset:0;background:#F9F7F2;z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;transition:opacity .8s,visibility .8s}
+#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-ring{width:64px;height:64px;animation:rotate 2s linear infinite}
+.loader-ring circle{fill:none;stroke:#C5A059;stroke-width:2;stroke-dasharray:1,200;stroke-dashoffset:0;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round}
+@keyframes rotate{100%{transform:rotate(360deg)}}
+@keyframes dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,200;stroke-dashoffset:-35px}100%{stroke-dasharray:90,200;stroke-dashoffset:-124px}}
+.preloader-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#1C1C1E;letter-spacing:.1em}
+</style>
+<script>
+// Hide preloader after 4 seconds NO MATTER WHAT
+setTimeout(function(){
+  var p=document.getElementById('preloader');
+  if(p) p.classList.add('hidden');
+},4000);
 </script>
 </head>
 <body>
 
 <!-- PRELOADER -->
 <div id="preloader" aria-hidden="true">
-  <div class="preloader-inner">
-    <svg viewBox="0 0 100 100" class="loader-ring">
-      <circle cx="50" cy="50" r="38"></circle>
-    </svg>
-    <p class="preloader-text">Perfect Choice</p>
-  </div>
+  <svg viewBox="0 0 100 100" class="loader-ring"><circle cx="50" cy="50" r="38"></circle></svg>
+  <p class="preloader-text">Perfect Choice</p>
 </div>
 
 <!-- CURSOR GLOW -->
-<div id="cursor-glow" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true" style="position:fixed;top:0;left:0;width:500px;height:500px;background:radial-gradient(circle,rgba(197,160,89,0.12) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:9998;opacity:0;transition:opacity .4s"></div>
 
 <!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">&times;</button>
-  <img id="lightboxImg" src="" alt="">
+<div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:10001;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;padding:2rem" aria-hidden="true">
+  <button id="lightboxClose" style="position:absolute;top:1.5rem;right:1.5rem;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);color:#fff;font-size:1.8rem;display:flex;align-items:center;justify-content:center;border:none;z-index:2">&times;</button>
+  <img id="lightboxImg" src="" alt="" style="max-width:90vw;max-height:85vh;object-fit:contain;border-radius:14px;box-shadow:0 24px 64px rgba(0,0,0,0.4);transform:scale(0.95);transition:transform .4s">
 </div>
 
 <!-- NAVBAR -->
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="Perfect Choice Cosmetics & Bangles logo" class="brand-logo">
-      <span class="brand-text">
-        <strong>Perfect Choice</strong>
-        <em>Cosmetics &amp; Bangles</em>
+<header class="navbar" id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:999;padding:1.2rem 0;transition:all .4s">
+  <div class="nav-inner" style="width:90%;max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between">
+    <a href="#home" class="brand" style="display:flex;align-items:center;gap:0.8rem;z-index:1001">
+      <img src="logo.png" alt="Perfect Choice logo" style="height:48px;width:auto">
+      <span style="display:flex;flex-direction:column;line-height:1.2">
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#1C1C1E">Perfect Choice</strong>
+        <em style="font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#6B6B6B">Cosmetics &amp; Bangles</em>
       </span>
     </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#categories" class="nav-link">Categories</a>
-      <a href="#brands" class="nav-link">Brands</a>
-      <a href="#arrivals" class="nav-link">New In</a>
-      <a href="#gallery" class="nav-link">Gallery</a>
-      <a href="#reviews" class="nav-link">Reviews</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <nav class="nav-links" id="navLinks" style="display:flex;align-items:center;gap:2.5rem">
+      <a href="#about" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">About</a>
+      <a href="#categories" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">Categories</a>
+      <a href="#brands" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">Brands</a>
+      <a href="#arrivals" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">New In</a>
+      <a href="#gallery" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">Gallery</a>
+      <a href="#reviews" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">Reviews</a>
+      <a href="#contact" class="nav-link" style="font-size:0.9rem;font-weight:500;color:#1C1C1E;position:relative;padding:0.5rem 0">Contact</a>
     </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost magnetic" href="tel:+919991118996" aria-label="Call the shop">Call</a>
-      <a class="btn btn-gold magnetic" href="https://wa.me/919991118996" target="_blank" rel="noopener">WhatsApp</a>
+    <div style="display:flex;gap:0.75rem">
+      <a class="btn btn-ghost" href="tel:+919991118996" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 2rem;font-size:0.95rem;font-weight:500;border-radius:100px;background:transparent;color:#1C1C1E;border:1px solid rgba(0,0,0,0.1)">Call</a>
+      <a class="btn btn-gold" href="https://wa.me/919991118996" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 2rem;font-size:0.95rem;font-weight:500;border-radius:100px;background:linear-gradient(135deg,#C5A059,#A08240);color:#fff;border:none;box-shadow:0 12px 40px rgba(197,160,89,0.2)">WhatsApp</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" style="display:none;width:32px;height:24px;flex-direction:column;justify-content:space-between;z-index:1001;background:none;border:none">
+      <span style="display:block;height:2px;background:#1C1C1E;border-radius:2px;transition:all .3s"></span>
+      <span style="display:block;height:2px;background:#1C1C1E;border-radius:2px;transition:all .3s"></span>
+      <span style="display:block;height:2px;background:#1C1C1E;border-radius:2px;transition:all .3s"></span>
     </button>
   </div>
 </header>
@@ -90,239 +80,90 @@
 <main id="main-content">
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-media">
-    <img src="shop-storefront.jpg" alt="Perfect Choice Cosmetics & Bangles storefront in Kusumgram, Purba Bardhaman" class="hero-img" loading="eager">
-    <div class="hero-scrim"></div>
+<section class="hero" id="home" style="position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden">
+  <div style="position:absolute;inset:0;z-index:0">
+    <img src="shop-storefront.jpg" alt="Perfect Choice storefront" style="width:100%;height:120%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.7) 100%);z-index:1"></div>
   </div>
-  <div class="hero-content reveal-section">
-    <svg class="hero-emblem" viewBox="0 0 160 160" aria-hidden="true">
-      <circle class="ring ring-1" cx="80" cy="80" r="70"></circle>
-      <circle class="ring ring-2" cx="80" cy="80" r="56"></circle>
-    </svg>
-    <p class="eyebrow reveal-child">Kusumgram &middot; Purba Bardhaman</p>
-    <h1 class="reveal-text">
-      <span>Perfect Choice</span>
-      <span>Cosmetics &amp; Bangles</span>
-    </h1>
-    <p class="hero-tagline reveal-child">Your One-Stop Destination for Beauty, Fashion &amp; Accessories</p>
-    <div class="hero-actions reveal-child">
-      <a href="https://wa.me/919991118996" target="_blank" rel="noopener" class="btn btn-gold btn-lg magnetic">Message on WhatsApp</a>
-      <a href="#categories" class="btn btn-outline btn-lg magnetic">Explore Categories</a>
+  <div style="position:relative;z-index:2;text-align:center;color:#fff;max-width:900px;padding:0 2rem">
+    <p style="font-size:0.85rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:#D4BC94;margin-bottom:1.5rem">Kusumgram · Purba Bardhaman</p>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6rem);color:#fff;margin-bottom:1rem;font-weight:600">Perfect Choice<br><span style="font-size:0.5em;font-weight:400;font-style:italic;color:#C5A059">Cosmetics &amp; Bangles</span></h1>
+    <p style="font-size:clamp(1.1rem,2.5vw,1.4rem);color:rgba(255,255,255,0.85);margin-bottom:2.5rem;font-weight:300;max-width:600px;margin-left:auto;margin-right:auto">Your One-Stop Destination for Beauty, Fashion &amp; Accessories</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/919991118996" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:1.1rem 2.4rem;font-size:1rem;font-weight:500;border-radius:100px;background:linear-gradient(135deg,#C5A059,#A08240);color:#fff;border:none;box-shadow:0 12px 40px rgba(197,160,89,0.2);text-decoration:none">Message on WhatsApp</a>
+      <a href="#categories" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:1.1rem 2.4rem;font-size:1rem;font-weight:500;border-radius:100px;background:transparent;color:#fff;border:1.5px solid #fff;text-decoration:none">Explore Categories</a>
     </div>
   </div>
-  <a href="#about" class="scroll-cue" aria-label="Scroll down">
-    <span></span>
-  </a>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
-  <div class="section-inner about-grid reveal-section">
-    <div class="about-media reveal-child">
-      <div class="about-img-wrapper">
-        <img src="shop-cabinet.jpg" alt="Skincare, haircare and beauty product shelves inside Perfect Choice Cosmetics & Bangles" loading="lazy">
-        <div class="about-frame" aria-hidden="true"></div>
-        <div class="about-blob" aria-hidden="true"></div>
+<section class="about" id="about" style="background:#F9F7F2">
+  <div class="section-inner" style="width:90%;max-width:1280px;margin:0 auto;padding:8rem 0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+      <div>
+        <div style="position:relative;border-radius:24px;overflow:visible">
+          <img src="shop-cabinet.jpg" alt="Skincare and haircare shelves" style="width:100%;border-radius:24px;box-shadow:0 24px 64px rgba(0,0,0,0.1);position:relative;z-index:2" loading="lazy">
+          <div style="position:absolute;inset:-1.5rem;border:2px solid #C5A059;border-radius:40px;z-index:1;opacity:0.4;pointer-events:none"></div>
+        </div>
       </div>
-    </div>
-    <div class="about-copy reveal-child">
-      <p class="eyebrow">About Our Store</p>
-      <h2 class="reveal-text">
-        <span>Beauty and tradition,</span>
-        <span>shelved together</span>
-      </h2>
-      <p>Perfect Choice Cosmetics &amp; Bangles is a family-run store in Kusumgram, Purba Bardhaman, built by owner <strong>Sakibullah Bora</strong> around a simple idea &mdash; that genuine cosmetics and beautiful accessories shouldn't be hard to find or afford.</p>
-      <p>Under one roof, we bring together everyday makeup essentials, skincare and haircare staples, fragrances, and a colourful world of bangles, earrings, necklaces and hair accessories. Every shelf is stocked with trusted, authentic brands and refreshed regularly, so there's always something new to discover.</p>
-      <ul class="about-points">
-        <li class="reveal-child"><span class="counter" data-target="100">0</span>%<br>Genuine, authentic products</li>
-        <li class="reveal-child"><span class="counter" data-target="12">0</span>+<br>Categories under one roof</li>
-        <li class="reveal-child"><span class="counter" data-target="14">0</span><br>Trusted brands stocked</li>
-      </ul>
+      <div>
+        <p style="font-size:0.85rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:#C5A059;margin-bottom:1rem">About Our Store</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem">Beauty and tradition,<br><span style="color:#C5A059;font-style:italic">shelved together</span></h2>
+        <p style="font-size:1.05rem;color:#6B6B6B;margin-bottom:1.2rem">Perfect Choice Cosmetics &amp; Bangles is a family-run store in Kusumgram, Purba Bardhaman, built by owner <strong>Sakibullah Bora</strong> around a simple idea — that genuine cosmetics and beautiful accessories shouldn't be hard to find or afford.</p>
+        <p style="font-size:1.05rem;color:#6B6B6B;margin-bottom:1.2rem">Under one roof, we bring together everyday makeup essentials, skincare and haircare staples, fragrances, and a colourful world of bangles, earrings, necklaces and hair accessories.</p>
+        <ul style="list-style:none;display:flex;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap">
+          <li style="font-size:0.95rem;color:#6B6B6B;line-height:1.4"><span style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#C5A059;display:block;line-height:1;margin-bottom:0.25rem">100%</span>Genuine products</li>
+          <li style="font-size:0.95rem;color:#6B6B6B;line-height:1.4"><span style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#C5A059;display:block;line-height:1;margin-bottom:0.25rem">12+</span>Categories</li>
+          <li style="font-size:0.95rem;color:#6B6B6B;line-height:1.4"><span style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#C5A059;display:block;line-height:1;margin-bottom:0.25rem">14</span>Trusted brands</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CATEGORIES -->
-<section class="categories" id="categories">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">What We Stock</p>
-    <h2 class="center reveal-text"><span>Product Categories</span></h2>
-    <p class="section-sub center reveal-child">Twelve worlds of beauty and accessories, arranged for easy browsing.</p>
+<section class="categories" id="categories" style="background:linear-gradient(to bottom,#F9F7F2,#F5F0E8)">
+  <div class="section-inner" style="width:90%;max-width:1280px;margin:0 auto;padding:8rem 0">
+    <p style="font-size:0.85rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:#C5A059;margin-bottom:1rem;display:block;text-align:center">What We Stock</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem;text-align:center">Product Categories</h2>
+    <p style="font-size:1.1rem;color:#6B6B6B;max-width:600px;margin:0 auto 3rem;text-align:center">Twelve worlds of beauty and accessories, arranged for easy browsing.</p>
 
-    <div class="cat-grid">
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20cosmetics%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">💄</span><p>Cosmetics</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20lipstick%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">💋</span><p>Lipsticks</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20kajal%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">👁️</span><p>Kajal</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20foundation%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">✨</span><p>Foundation</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20skincare%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">🧴</span><p>Skincare</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20haircare%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">💆</span><p>Haircare</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20perfume%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">🌸</span><p>Perfumes</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20ring%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">💍</span><p>Ring</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20earrings%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">👂</span><p>Earrings</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20necklace%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">📿</span><p>Necklaces</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20hair%20accessories%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">🎀</span><p>Hair Accessories</p></a>
-      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20gift%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%20so%20I%20can%20browse%20your%20designs%3F" target="_blank" rel="noopener" class="cat-card reveal-child magnetic"><span class="cat-ring">🎁</span><p>Gifts</p></a>
-    </div>
-  </div>
-</section>
-
-<!-- BRANDS -->
-<section class="brands" id="brands">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">On Our Shelves</p>
-    <h2 class="center reveal-text"><span>Featured Brands</span></h2>
-  </div>
-  <div class="marquee" role="list" aria-label="Brands we stock">
-    <div class="marquee-track">
-      <span>Lakmé</span><span>L&rsquo;Oréal Paris</span><span>Maybelline</span><span>MARS</span><span>Swiss Beauty</span><span>Blue Heaven</span><span>Sugar</span><span>Mamaearth</span><span>Nivea</span><span>Dove</span><span>Garnier</span><span>Himalaya</span><span>Plum</span><span>Cetaphil</span>
-      <span aria-hidden="true">Lakmé</span><span aria-hidden="true">L&rsquo;Oréal Paris</span><span aria-hidden="true">Maybelline</span><span aria-hidden="true">MARS</span><span aria-hidden="true">Swiss Beauty</span><span aria-hidden="true">Blue Heaven</span><span aria-hidden="true">Sugar</span><span aria-hidden="true">Mamaearth</span><span aria-hidden="true">Nivea</span><span aria-hidden="true">Dove</span><span aria-hidden="true">Garnier</span><span aria-hidden="true">Himalaya</span><span aria-hidden="true">Plum</span><span aria-hidden="true">Cetaphil</span>
-    </div>
-  </div>
-</section>
-
-<!-- NEW ARRIVALS -->
-<section class="showcase" id="arrivals">
-  <div class="section-inner showcase-grid reveal-section">
-    <div class="showcase-copy reveal-child">
-      <p class="eyebrow">Fresh On The Shelf</p>
-      <h2 class="reveal-text"><span>New Arrivals</span></h2>
-      <p>We restock frequently, bringing in new shades, finishes and skincare lines so regular customers always find something worth a second look. Drop by or message us on WhatsApp to ask what's just arrived.</p>
-      <a href="https://wa.me/919991118996" target="_blank" rel="noopener" class="btn btn-outline magnetic">Ask What's New</a>
-    </div>
-    <div class="showcase-media reveal-child">
-      <div class="img-reveal">
-        <img src="cosmetics-display-1.jpg" alt="New cosmetics and makeup stock on display shelves" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BEST SELLERS -->
-<section class="showcase alt" id="bestsellers">
-  <div class="section-inner showcase-grid reverse reveal-section">
-    <div class="showcase-media reveal-child">
-      <div class="img-reveal">
-        <img src="cosmetics-display-2.jpg" alt="Lipsticks, lip liners and makeup essentials arranged on shelves" loading="lazy">
-      </div>
-    </div>
-    <div class="showcase-copy reveal-child">
-      <p class="eyebrow">Customer Favourites</p>
-      <h2 class="reveal-text"><span>Best Sellers</span></h2>
-      <p>Everyday makeup essentials, nourishing skincare, and our bangle &amp; earring sets are what customers reach for again and again. Come in and see what's flying off the shelves this week.</p>
-      <a href="#categories" class="btn btn-outline magnetic">Browse Categories</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why" id="why">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">Why Perfect Choice</p>
-    <h2 class="center reveal-text"><span>Why Choose Us</span></h2>
-
-    <div class="why-grid">
-      <div class="why-card reveal-child glass">
-        <span class="why-icon" aria-hidden="true">✓</span>
-        <h3>Genuine Brands</h3>
-        <p>Every product on our shelves is sourced from authorised, trusted suppliers &mdash; no imitations.</p>
-      </div>
-      <div class="why-card reveal-child glass">
-        <span class="why-icon" aria-hidden="true">₹</span>
-        <h3>Fair Pricing</h3>
-        <p>Honest, transparent prices with regular offers, so quality beauty stays within everyone's reach.</p>
-      </div>
-      <div class="why-card reveal-child glass">
-        <span class="why-icon" aria-hidden="true">◎</span>
-        <h3>Wide Variety</h3>
-        <p>From daily skincare to bridal bangles, twelve categories are stocked under a single roof.</p>
-      </div>
-      <div class="why-card reveal-child glass">
-        <span class="why-icon" aria-hidden="true">♥</span>
-        <h3>Personal Service</h3>
-        <p>Sakibullah and the team take time to help you find the right shade, scent or accessory.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">Inside The Store</p>
-    <h2 class="center reveal-text"><span>Gallery</span></h2>
-    <p class="section-sub center reveal-child">A look at our shelves and displays, exactly as they are in-store.</p>
-
-    <div class="gallery-grid">
-      <button class="gallery-item reveal-child" data-full="shop-storefront.jpg" aria-label="View storefront photo">
-        <img src="shop-storefront.jpg" alt="Perfect Choice storefront" loading="lazy">
-        <div class="gallery-overlay"><span>Our Storefront</span></div>
-      </button>
-      <button class="gallery-item reveal-child" data-full="shop-cabinet.jpg" aria-label="View skincare cabinet photo">
-        <img src="shop-cabinet.jpg" alt="Skincare and haircare cabinet" loading="lazy">
-        <div class="gallery-overlay"><span>Skincare &amp; Haircare Wall</span></div>
-      </button>
-      <button class="gallery-item reveal-child" data-full="shop-bangles.jpg" aria-label="View bangles and jewellery photo">
-        <img src="shop-bangles.jpg" alt="Bangles and artificial jewellery display" loading="lazy">
-        <div class="gallery-overlay"><span>Bangles &amp; Jewellery</span></div>
-      </button>
-      <button class="gallery-item reveal-child" data-full="cosmetics-display-1.jpg" aria-label="View makeup shelf photo">
-        <img src="cosmetics-display-1.jpg" alt="Makeup and cosmetics shelf" loading="lazy">
-        <div class="gallery-overlay"><span>Makeup Shelf</span></div>
-      </button>
-      <button class="gallery-item reveal-child" data-full="cosmetics-display-2.jpg" aria-label="View lipstick and liner shelf photo">
-        <img src="cosmetics-display-2.jpg" alt="Lipstick and lip liner shelf" loading="lazy">
-        <div class="gallery-overlay"><span>Lip Colour Wall</span></div>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">In Their Words</p>
-    <h2 class="center reveal-text"><span>Customer Reviews</span></h2>
-    <div class="reviews-card reveal-child glass">
-      <span class="reviews-ring" aria-hidden="true">★</span>
-      <p>Reviews coming soon.</p>
-      <span class="reviews-sub">We're gathering feedback from our customers &mdash; check back shortly.</span>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section class="instagram" id="instagram">
-  <div class="section-inner reveal-section">
-    <div class="instagram-inner glass reveal-child">
-      <div class="insta-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-          <circle cx="12" cy="12" r="4.2"></circle>
-          <circle cx="17.2" cy="6.8" r="1"></circle>
-        </svg>
-      </div>
-      <h2 class="reveal-text"><span>Follow Us on Instagram</span></h2>
-      <p>See our latest stock, offers and behind-the-counter moments.</p>
-      <a href="https://www.instagram.com/perfectchoice.store?igsh=ZThrNnNsNHY0MHN6/" target="_blank" rel="noopener" class="btn btn-gold magnetic">@perfect_choice_cosmetics_bangles</a>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="section-inner reveal-section">
-    <p class="eyebrow center reveal-child">Get In Touch</p>
-    <h2 class="center reveal-text"><span>Contact Information</span></h2>
-
-    <div class="contact-grid">
-      <div class="contact-info reveal-child">
-        <a class="contact-row glass magnetic" href="tel:+919991118996">
-          <span class="contact-ring" aria-hidden="true">☎</span>
-          <div><strong>Call / WhatsApp</strong><p>+91 99911 18996</p></div>
-        </a>
-        <a class="contact-row glass magnetic" href="mailto:perfectchoiceyour@gmail.com">
-          <span class="contact-ring" aria-hidden="true">✉</span>
-          <div><strong>Email</strong><p>perfectchoiceyour@gmail.com</p></div>
-        </a>
-       
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem">
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20cosmetics%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">💄</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Cosmetics</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20lipstick%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">💋</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Lipsticks</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20kajal%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">👁️</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Kajal</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20foundation%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">✨</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Foundation</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20skincare%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">🧴</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Skincare</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20haircare%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">💆</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Haircare</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20perfume%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">🌸</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Perfumes</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20ring%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">💍</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Ring</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20earrings%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <span style="display:flex;align-items:center;justify-content:center;width:72px;height:72px;margin:0 auto 1.25rem;background:linear-gradient(135deg,rgba(197,160,89,0.08),rgba(197,160,89,0.02));border-radius:50%;font-size:1.8rem">👂</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin:0">Earrings</p>
+      </a>
+      <a href="https://wa.me/919991118996?text=Hello%20Perfect%20Choice%20team%2C%20I%20am%20very%20interested%20in%20your%20necklace%20collection.%20Could%20you%20please%20send%20me%20your%20latest%20catalog%3F" target="_blank" rel="noopener" style="background:#fff;border-radius:24px;padding:2.5rem 1.5rem;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);text-decoration:none;color:inherit;transition:all .4s">
+        <
